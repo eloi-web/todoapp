@@ -40,21 +40,21 @@ export default function TodoInput({ onAdd }) {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Add a task…"
-        className="col-span-2 w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-2 text-sm placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-zinc-900 dark:text-white"
+        className="col-span-2 w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-2 text-sm placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-zinc-100 dark:text-zinc-900"
       />
 
       <input
         type="date"
         value={dueDate}
         onChange={(e) => setDueDate(e.target.value)}
-        className="w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-zinc-900 dark:text-white"
+        className="w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-zinc-100 dark:text-zinc-900"
         aria-label="Due date"
       />
 
       <select
         value={priority}
         onChange={(e) => setPriority(e.target.value)}
-        className="w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 dark:bg-zinc-900 dark:text-white"
+        className="w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500  dark:bg-zinc-100 dark:text-zinc-900"
         aria-label="Priority"
       >
         <option value="low">Low ⬇</option>

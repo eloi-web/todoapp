@@ -9,7 +9,7 @@ export default function TodoList({ tasks, onToggle, onUpdate, onDelete }) {
   if (tasks.length === 0) {
     return (
       <div className="rounded-xl border border-dashed border-zinc-700 p-8 text-center text-zinc-400">
-        Nothing here yet. Add your first task above ✨
+        Nothing here yet. Add your first task(todo) above ✨
       </div>
     );
   }

@@ -4,7 +4,7 @@ import { useState } from "react";
 const priorityChip = {
   low: "bg-zinc-800 text-zinc-300",
   medium: "bg-amber-600/20 text-amber-300",
-  high: "bg-rose-600/20 text-rose-300",
+  high: "bg-green-600/20 text-green-300",
 };
 
 export default function TodoItem({ task, onToggle, onUpdate, onDelete }) {
@@ -23,7 +23,7 @@ export default function TodoItem({ task, onToggle, onUpdate, onDelete }) {
   };
 
   return (
-    <div className="group flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-900/60 px-4 py-3 transition hover:border-zinc-700">
+    <div className="group flex items-center justify-between rounded-xl border border-zinc-800 text-zinc-900 bg-zinc-900/60 px-4 py-3 dark:bg-zinc-100 dark:text-zinc-900 transition hover:border-zinc-700">
       {/* Left: checkbox + title */}
       <div className="flex items-center gap-3">
         <input
@@ -45,7 +45,7 @@ export default function TodoItem({ task, onToggle, onUpdate, onDelete }) {
           />
         ) : (
           <div
-            className={`text-sm ${task.completed ? "line-through text-zinc-500" : "text-zinc-100"}`}
+            className={`text-sm ${task.completed ? "line-through text-zinc-500 dark:text-zinc-500" : "text-zinc-500 dark:text-zinc-500"}`}
             onDoubleClick={() => setIsEditing(true)} // quick inline edit
             title="Double click to edit"
           >
@@ -77,12 +77,12 @@ export default function TodoItem({ task, onToggle, onUpdate, onDelete }) {
         {task.tags?.length > 0 && (
           <div className="hidden gap-1 sm:flex">
             {task.tags.slice(0, 3).map((tag) => (
-              <span key={tag} className="rounded-md bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300">
+              <span key={tag} className="rounded-md bg-zinc-800 px-2 py-0.5 text-xs text-zinc-900">
                 #{tag}
               </span>
             ))}
             {task.tags.length > 3 && (
-              <span className="rounded-md bg-zinc-800 px-2 py-0.5 text-xs text-zinc-300">
+              <span className="rounded-md bg-zinc-800 px-2 py-0.5 text-xs text-zinc-900">
                 +{task.tags.length - 3}
               </span>
             )}
@@ -91,7 +91,7 @@ export default function TodoItem({ task, onToggle, onUpdate, onDelete }) {
 
         <button
           onClick={() => setIsEditing((v) => !v)}
-          className="rounded-md px-2 py-1 text-xs text-zinc-300 hover:bg-zinc-800"
+          className="rounded-md px-2 py-1 text-xs text-zinc-300 hover:bg-amber-200"
           title="Edit"
         >
           ✏️
